@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NetvisorWSClient", "NetvisorWSClient\NetvisorWSClient.vbproj", "{D549636D-FA61-4256-B0D7-CAA2B71E29E8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NetvisorWSClientTester", "NetvisorWSClientTester\NetvisorWSClientTester.vbproj", "{2CEABADA-7E7B-46B0-8E64-7292CB1C36D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D549636D-FA61-4256-B0D7-CAA2B71E29E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D549636D-FA61-4256-B0D7-CAA2B71E29E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D549636D-FA61-4256-B0D7-CAA2B71E29E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D549636D-FA61-4256-B0D7-CAA2B71E29E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CEABADA-7E7B-46B0-8E64-7292CB1C36D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CEABADA-7E7B-46B0-8E64-7292CB1C36D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CEABADA-7E7B-46B0-8E64-7292CB1C36D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CEABADA-7E7B-46B0-8E64-7292CB1C36D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3ADA1BD-B79E-45D3-8F03-727C32EB7B8B}
+	EndGlobalSection
+EndGlobal

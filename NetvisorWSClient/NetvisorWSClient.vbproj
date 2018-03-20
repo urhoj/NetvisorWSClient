@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D549636D-FA61-4256-B0D7-CAA2B71E29E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>NetvisorWSClient</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>NetvisorWSClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>NetvisorWSClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="communication\accounting\schemas\AccountingPeriodArchiveDocumentRoot.vb" />
+    <Compile Include="communication\accounting\schemas\AccountingPeriodArchiveRoot.vb" />
+    <Compile Include="communication\accounting\NetvisorAccount.vb" />
+    <Compile Include="communication\accounting\NetvisorAccountingPeriodList.vb" />
+    <Compile Include="communication\accounting\NetvisorAccountList.vb" />
+    <Compile Include="communication\accounting\NetvisorApplicationAccountingPeriodListResponse.vb" />
+    <Compile Include="communication\accounting\NetvisorApplicationAccountListReponse.vb" />
+    <Compile Include="communication\accounting\NetvisorDimensionItemRequest.vb" />
+    <Compile Include="communication\accounting\NetvisorPeriod.vb" />
+    <Compile Include="communication\collector\NetvisorApplicationPayrollPeriodCollectorRequest.vb" />
+    <Compile Include="communication\collector\NetvisorPayrollPeriodCollector.vb" />
+    <Compile Include="communication\collector\NetvisorPayrollRatioLine.vb" />
+    <Compile Include="communication\collector\NetvisorApplicationCollectorTripExpenseRequest.vb" />
+    <Compile Include="communication\collector\NetvisorCollectorTripExpense.vb" />
+    <Compile Include="communication\collector\NetvisorCollectorTripExpenseCustomLine.vb" />
+    <Compile Include="communication\collector\NetvisorCollectorTripExpenseDailyCompensationLine.vb" />
+    <Compile Include="communication\collector\NetvisorCollectorTripExpenseTravelLine.vb" />
+    <Compile Include="communication\payroll\NetvisorApplicationGetPayslipResponse.vb" />
+    <Compile Include="communication\controller\NetvisorApplicationAccountingBudgetDimensionBudgetRequest.vb" />
+    <Compile Include="communication\controller\NetvisorAccountingBudgetAccount.vb" />
+    <Compile Include="communication\controller\NetvisorAccountingBudgetAccountBudget.vb" />
+    <Compile Include="communication\controller\NetvisorAccountingBudgetAccountListAccount.vb" />
+    <Compile Include="communication\controller\NetvisorAccountingBudgetDimension.vb" />
+    <Compile Include="communication\controller\NetvisorAccountingBudgetLockedDimension.vb" />
+    <Compile Include="communication\controller\NetvisorAccountingBudgetDimensionBudget.vb" />
+    <Compile Include="communication\controller\NetvisorApplicationAccountingBudgetAccountBudgetRequest.vb" />
+    <Compile Include="communication\controller\NetvisorApplicationAccountingBudgetAccountBudgetResponse.vb" />
+    <Compile Include="communication\controller\NetvisorApplicationAccountingBudgetAccountListResponse.vb" />
+    <Compile Include="communication\accounting\NetvisorApplicationDimensionListResponse.vb" />
+    <Compile Include="communication\accounting\NetvisorDimenisonNameDimensionDetail.vb" />
+    <Compile Include="communication\accounting\NetvisorDimensionName.vb" />
+    <Compile Include="communication\controller\NetvisorAccountingBudgetMonth.vb" />
+    <Compile Include="communication\controller\NetvisorApplicationAccountingBudgetDimensionBudgetResponse.vb" />
+    <Compile Include="communication\NetvisorApplicationRequest.vb" />
+    <Compile Include="communication\NetvisorApplicationResponse.vb" />
+    <Compile Include="communication\payroll\NetvisorApplicationEmployeeRequest.vb" />
+    <Compile Include="communication\payroll\NetvisorApplicationPayrollAdvanceRequest.vb" />
+    <Compile Include="communication\payroll\NetvisorApplicationPayrollExternalPaymentRequest.vb" />
+    <Compile Include="communication\payroll\NetvisorEmployee.vb" />
+    <Compile Include="communication\payroll\NetvisorPayrollAdvance.vb" />
+    <Compile Include="communication\payroll\NetvisorPayrollExternalPayment.vb" />
+    <Compile Include="communication\payroll\PayslipContentRoot.vb" />
+    <Compile Include="communication\payroll\PaysliplistRoot.vb" />
+    <Compile Include="communication\payroll\NetvisorApplicationPaysliplistResponse.vb" />
+    <Compile Include="communication\purchase\NetvisorApplicationPaymentListResponse.vb" />
+    <Compile Include="communication\purchase\NetvisorApplicationPurchaseInvoiceDetailedListResponse.vb" />
+    <Compile Include="communication\purchase\NetvisorApplicationPurchaseInvoiceResponse.vb" />
+    <Compile Include="communication\purchase\NetvisorApplicationPurchaseOrderListResponse.vb" />
+    <Compile Include="communication\purchase\NetvisorApplicationPurchaseOrderRequest.vb" />
+    <Compile Include="communication\purchase\NetvisorApplicationPurchaseOrderResponse.vb" />
+    <Compile Include="communication\purchase\NetvisorPaymentListPayment.vb" />
+    <Compile Include="communication\purchase\NetvisorPurchaseInvoiceCommentLine.vb" />
+    <Compile Include="communication\purchase\NetvisorPurchaseInvoiceSubLine.vb" />
+    <Compile Include="communication\purchase\NetvisorPurchaseOrder.vb" />
+    <Compile Include="communication\purchase\NetvisorPurchaseOrderCommentLine.vb" />
+    <Compile Include="communication\purchase\NetvisorPurchaseOrderLine.vb" />
+    <Compile Include="communication\purchase\NetvisorPurchaseOrderListOrder.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationSalesPersonnelListResponse.vb" />
+    <Compile Include="communication\sales\NetvisorInvoiceAccrualEntry.vb" />
+    <Compile Include="communication\sales\NetvisorSalesPersonnelListSalesPerson.vb" />
+    <Compile Include="communication\webshop\NetvisorApplicationWebShopCustomerResponse.vb" />
+    <Compile Include="communication\webshop\NetvisorApplicationWebShopProductImageResponse.vb" />
+    <Compile Include="communication\webshop\NetvisorApplicationWebShopProductResponse.vb" />
+    <Compile Include="communication\webshop\NetvisorWebShopCustomer.vb" />
+    <Compile Include="communication\webshop\NetvisorWebShopProduct.vb" />
+    <Compile Include="communication\webshop\NetvisorWebShopProductGroup.vb" />
+    <Compile Include="communication\webshop\NetvisorWebShopProductImage.vb" />
+    <Compile Include="communication\webshop\NetvisorWebShopProductVariant.vb" />
+    <Compile Include="communication\WSClient.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="util\Hash.vb" />
+    <Compile Include="util\PartnerSettings.vb" />
+    <Compile Include="util\ReferenceNumber.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="util\ReferenceNumberVbaAdapter.vb" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="communication\accounting\NetvisorAccountingLedgerVoucher.vb" />
+    <Compile Include="communication\accounting\NetvisorApplicationAccountingLedgerResponse.vb" />
+    <Compile Include="communication\accounting\NetvisorApplicationVoucherRequest.vb" />
+    <Compile Include="communication\accounting\NetvisorVoucher.vb" />
+    <Compile Include="communication\accounting\NetvisorVoucherLine.vb" />
+    <Compile Include="communication\controller\NetvisorAccountingBudgetCombination.vb" />
+    <Compile Include="communication\collector\NetvisorApplicationWorkDayRequest.vb" />
+    <Compile Include="communication\collector\NetvisorTripExpenseCustomLine.vb" />
+    <Compile Include="communication\collector\NetvisorWorkDay.vb" />
+    <Compile Include="communication\collector\NetvisorWorkDayHour.vb" />
+    <Compile Include="communication\common\NetvisorAttachment.vb" />
+    <Compile Include="communication\common\NetvisorDimension.vb" />
+    <Compile Include="communication\controller\NetvisorAccountingBudget.vb" />
+    <Compile Include="communication\controller\NetvisorApplicationAccountingBudgetRequest.vb" />
+    <Compile Include="communication\crm\NetvisorApplicationProcessListResponse.vb" />
+    <Compile Include="communication\crm\NetvisorApplicationProcessRequest.vb" />
+    <Compile Include="communication\crm\NetvisorProcess.vb" />
+    <Compile Include="communication\crm\NetvisorProcessComment.vb" />
+    <Compile Include="communication\crm\NetvisorProcessCustomExpence.vb" />
+    <Compile Include="communication\crm\NetvisorProcessExpence.vb" />
+    <Compile Include="communication\crm\NetvisorProcessListProcess.vb" />
+    <Compile Include="communication\crm\NetvisorProcessProject.vb" />
+    <Compile Include="communication\crm\NetvisorProcessTemplate.vb" />
+    <Compile Include="communication\escan\EScanDocument.vb" />
+    <Compile Include="communication\escan\NetvisorApplicationEscanRequest.vb" />
+    <Compile Include="communication\NetvisorApplicationResponseFactory.vb" />
+    <Compile Include="communication\payroll\NetvisorApplicationPayrollPaycheckBatchRequest.vb" />
+    <Compile Include="communication\payroll\NetvisorPayrollPaycheckBatch.vb" />
+    <Compile Include="communication\payroll\NetvisorPayrollPaycheckBatchLine.vb" />
+    <Compile Include="communication\purchase\NetvisorApplicationPurchaseInvoiceListResponse.vb" />
+    <Compile Include="communication\purchase\NetvisorApplicationPurchaseInvoiceRequest.vb" />
+    <Compile Include="communication\purchase\NetvisorPurchaseInvoice.vb" />
+    <Compile Include="communication\purchase\NetvisorPurchaseInvoiceLine.vb" />
+    <Compile Include="communication\purchase\NetvisorPurchaseInvoiceListInvoice.vb" />
+    <Compile Include="communication\common\NetvisorApplicationOutgoingPaymentRequest.vb" />
+    <Compile Include="communication\sales\INetvisorInvoiceLine.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationCustomerListResponse.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationCustomerResponse.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationProductListResponse.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationProductRequest.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationProductResponse.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationSalesInvoiceListResponse.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationSalesInvoiceResponse.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationSalesPaymentListResponse.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationSalesPaymentRequest.vb" />
+    <Compile Include="communication\sales\NetvisorCustomer.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationCustomerRequest.vb" />
+    <Compile Include="communication\sales\NetvisorApplicationInvoiceRequest.vb" />
+    <Compile Include="communication\sales\NetvisorCustomerListCustomer.vb" />
+    <Compile Include="communication\sales\NetvisorInvoice.vb" />
+    <Compile Include="communication\sales\NetvisorInvoiceCommentLine.vb" />
+    <Compile Include="communication\sales\NetvisorInvoiceCustomTag.vb" />
+    <Compile Include="communication\sales\NetvisorInvoiceProductLine.vb" />
+    <Compile Include="communication\sales\NetvisorInvoiceVoucherLine.vb" />
+    <Compile Include="communication\common\NetvisorOutgoingPayment.vb" />
+    <Compile Include="communication\sales\NetvisorProduct.vb" />
+    <Compile Include="communication\sales\NetvisorProductListProduct.vb" />
+    <Compile Include="communication\sales\NetvisorSalesInvoice.vb" />
+    <Compile Include="communication\sales\NetvisorSalesInvoiceListInvoice.vb" />
+    <Compile Include="communication\sales\NetvisorSalesPayment.vb" />
+    <Compile Include="communication\sales\NetvisorSalesPaymentListPayment.vb" />
+    <Compile Include="util\CustomerSettings.vb" />
+    <Compile Include="util\FinnishBankAccountNumber.vb" />
+    <Compile Include="util\FinnishOrganisationIdentifier.vb" />
+    <Compile Include="util\FinnishPersonalIdentificationNumber.vb" />
+    <Compile Include="util\FixedLengthFieldFormatter.vb" />
+    <Compile Include="util\IBankAccountNumber.vb" />
+    <Compile Include="util\FixedLengthPayrollPaycheckImporter.vb" />
+    <Compile Include="util\UniqueIdentifierGenerator.vb" />
+    <Compile Include="util\VatCode.vb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
