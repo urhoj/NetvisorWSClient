@@ -26,16 +26,26 @@ Module NetvisorDemoDataGenerator
 
     Sub Main()
 
-        Dim partnerSettings As New PartnerSettings("Netvisor DemoDataGenerator", "XXXX", "XXXX")
-        Dim customerSettings As New CustomerSettings("XXXX", "XXXX", CustomerSettings.InterfaceLanguage_Finnish)
-        Dim targetOrganisationIdentifier As New FinnishOrganisationIdentifier("XXXX")
+        Dim partnerSettings As New PartnerSettings("Netvisor DemoDataGenerator", My.Settings.partnerIdentifier, My.Settings.partnerPrivateKey)
+        Dim customerSettings As New CustomerSettings(My.Settings.customerIdentifier, My.Settings.customerPrivateKey, CustomerSettings.InterfaceLanguage_Finnish)
+        Dim targetOrganisationIdentifier As New FinnishOrganisationIdentifier(My.Settings.organizationID)
         Dim netvisorClient As WSClient
         Dim response As NetvisorApplicationResponse
 
         netvisorClient = New WSClient(customerSettings, partnerSettings)
-        'netvisorClient.TargetEnvironment = WSClient.Environment.PRODUCTION
-        netvisorClient.TargetEnvironment = WSClient.Environment.DEMO
-        'netvisorClient.TargetEnvironment = WSClient.Environment.ISV
+
+        Select Case My.Settings.environment.ToLowerInvariant
+            Case "demo"
+                netvisorClient.TargetEnvironment = WSClient.Environment.DEMO
+            Case "production"
+                netvisorClient.TargetEnvironment = WSClient.Environment.PRODUCTION
+            Case "devel", "development"
+                netvisorClient = New WSClient(customerSettings, partnerSettings)
+            Case "isv"
+                netvisorClient.TargetEnvironment = WSClient.Environment.ISV
+            Case Else
+                Throw New ArgumentNullException("Environment not spesified on appsettings.")
+        End Select
 
         Dim addresses() As String = {"Kalastajatorpantie 1", "Katajanokanlaituri 7", "Sorsavuorenkatu 14 B 92", "Koskelantie 42", "Liisantie 11", "Kasarmikatu 15", "Kasarmikatu 12", "Bubbiksentie 6", "Mankkaantie 39", "Topeliuksenkatu 99", "Ainonkatu 4 ", "Ahertajantie 6", "Henry Fordin katu 5 C", "Malminkaari 24", "Ainonkatu 5", "Ainonkatu 6"}
         Dim postcodes() As String = {"02781", "02180", "00260", "00700", "00100", "02100", "00150", "81700", "53100", "53850", "81810"}
@@ -75,6 +85,10 @@ Module NetvisorDemoDataGenerator
 
             If response.IsresponseOK Then
                 Console.WriteLine(customer.CustomerIdentifier & " - OK")
+            ElseIf response.responseData.Contains("AUTHENTICATION_FAILED") Then
+                Console.WriteLine(customer.CustomerIdentifier & response.ErrorMessage)
+                Throw New Exception("Authentication failed with partnersettings: " & partnerSettings.PartnerIdentifier & " - " & partnerSettings.PartnerPrivateKey &
+                                    " and customersettings: " & customerSettings.CustomerIdentifier & " - " & customerSettings.CustomerPrivateKey)
             Else
                 Console.WriteLine(customer.CustomerIdentifier & " - FAILED " & response.ErrorMessage)
             End If

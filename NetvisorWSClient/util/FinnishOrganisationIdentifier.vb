@@ -33,7 +33,7 @@ Namespace NetvisorWSClient.util
             If FinnishOrganisationIdentifier.isOrganisationIdentifierCorrect(identifier) = True Then
                 m_identifier = identifier
             Else
-                Throw New Exception("Y-tunnus ei ole oikeassa muodossa")
+                Throw New Exception("Y-tunnus" & identifier & " ei ole oikeassa muodossa")
             End If
 
         End Sub
