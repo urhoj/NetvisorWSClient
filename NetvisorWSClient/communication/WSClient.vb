@@ -21,9 +21,9 @@ Namespace NetvisorWSClient.communication
         Public Const InterfaceId As String = "36613EE9-125F-493d-9968-771E18C2226F"
         Public Const EventsId As String = "A036F02F-F87E-4548-A536-7DD7EA8E62B2"
 
-        Public Const BASE_URL_PRODUCTION As String = "Anna Netvisorin tuotanto ympäristön URI"
-        Public Const BASE_URL_DEMO As String = "Anna Netvisorin koulutus ympäristön URI"
-        Public Const BASE_URL_ISV As String = "Anna Netvisorin ISV eli testaus ympäristön URI"
+        Public Const BASE_URL_PRODUCTION As String = "https://integration.netvisor.fi/"
+        Public Const BASE_URL_DEMO As String = "http://integrationdemo.netvisor.fi/"
+        Public Const BASE_URL_ISV As String = "http://kehitys.netvisor.fi/"
 
         Public Const ACTION_CUSTOMER As String = "customer.nv"
         Public Const ACTION_SALESINVOICE As String = "salesinvoice.nv"
